@@ -1,7 +1,44 @@
+* {
+  font-family: "Cairo", sans-serif;
+}
 a {
   text-decoration: none;
 }
 .card {
   width: 600px;
   padding: 35px;
+}
+
+.categories h5 {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.categories h5:hover {
+  border: 2px solid #000;
+  cursor: pointer;
+}
+.activeCategory {
+  border: 2px solid #000 !important;
+}
+
+.product {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.product img {
+  height: 60%;
+  object-fit: contain;
+}
+.cart {
+  border-radius: 50%;
+  background: none;
+  color: #000;
 }

@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Salaa</a>
+                <a class="navbar-brand" href="#">Lets Cookies</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -37,14 +37,16 @@
                         <a href="#"><i class="fas fa-shopping-cart text-white"></i></a>
                         &nbsp;
                         &nbsp;
-                        <div>
+                        <div id="loginDiv">
                             <a class="text-white " href="/pages/login.html">Login &nbsp;</a>
                             <a class="text-white " href="#"> | &nbsp; Register &nbsp; </a>
                         </div>
                         <div>
                         </div>
-                        <div>
-                            <a class="text-white " href="#"> | &nbsp; <i class="fa-regular fa-user"></i></a>
+                        <div id="profileDiv">
+                            <a class="text-white " href="#"> | &nbsp; <span id="username"></span></a>
+                            <a class="text-white " href="#"> | &nbsp; <i class="fa-regular fa-user"
+                                    onclick="logout()"></i></a>
                         </div>
                     </form>
                 </div>
@@ -53,7 +55,24 @@
     </header>
 
     <main>
+        <!-- categories -->
+        <section>
+            <div class="container">
+                <div class="row categories" id="categories">
+                    <div class="col-md-3">
+                        <h5 id="category_3" onclick="addActiveCategory(3)">All Categories</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- products -->
+        <section>
+            <div class="container">
+                <div class="row my-5 gy-3" id="products">
 
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -63,6 +82,9 @@
     </footer>
     <script src="assets/dist/js/bootstrap.popper.min.js"></script>
     <script src="assets/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/categories.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/products.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
