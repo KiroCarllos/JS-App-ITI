@@ -2,10 +2,16 @@
   font-family: "Cairo", sans-serif;
 }
 body {
+  margin-top: 100px;
   animation: winter 20s linear infinite;
   background-image: url(../images/3.png);
 }
-
+nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 @keyframes winter {
   0% {
     background-position: 0px 0px, 0px 0px, 0px 0px;
@@ -112,4 +118,7 @@ a {
 
 .btn-primary {
   margin-top: 20px;
+}
+#trash {
+  cursor: pointer;
 }
