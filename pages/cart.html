@@ -1,115 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart Page</title>
-    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/fonwawsome/all.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="/index.html">Lets Cookies</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="/index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Policy</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Reviews</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Our Partners</a>
-              </li>
-            </ul>
-            <form class="d-flex align-items-center">
-              <a href="/pages/cart.html" class="position-relative me-3">
-                <i class="fas fa-shopping-cart text-white"></i>
-                <span
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  id="cart-count"
-                ></span>
-              </a>
-              <div id="loginDiv" class="d-flex align-items-center">
-                <a class="text-white me-2" href="/pages/login.html">Login</a>
-                <span class="text-white">|</span>
-                <a class="text-white ms-2" href="#">Register</a>
-              </div>
-              <div id="profileDiv" class="d-flex align-items-center ms-3">
-                <span class="text-white me-2">|</span>
-                <span class="text-white" id="username"></span>
-                <span class="text-white ms-2">|</span>
-                <i
-                  class="fa-regular fa-user text-white ms-2"
-                  onclick="logout()"
-                ></i>
-              </div>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/fonwawsome/all.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
 
-    <div class="container">
-      <h1 class="my-4">Shopping Cart</h1>
-      <div class="row">
-        <div class="col-md-8" id="cart">
-          <h2>Your Items</h2>
-          <table class="table">
-            <thead>
-              <tr>
-                <th class="rounded-start-5">Product</th>
-                <th class="">Price</th>
-                <th class="">Quantity</th>
-                <th class="">Total</th>
-                <th class="rounded-end-5">Actions</th>
-              </tr>
-            </thead>
-
-            <tbody id="cart-items"></tbody>
-          </table>
-        </div>
-        <div class="col-md-4">
-          <h2>Summary</h2>
-          <p>Subtotal: $40.00</p>
-          <p>Tax: $4.00</p>
-          <h3>Total: $44.00</h3>
-          <button class="btn btn-primary">Checkout</button>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="/index.html">Lets Cookies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Policy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Partners</a>
+            </li>
+          </ul>
+          <form class="d-flex align-items-center">
+            <a href="/pages/cart.html" class="position-relative me-3">
+              <i class="fas fa-shopping-cart text-white"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                id="cart-count"></span>
+            </a>
+            <div id="loginDiv" class="d-flex align-items-center">
+              <a class="text-white me-2" href="/pages/login.html">Login</a>
+              <span class="text-white">|</span>
+              <a class="text-white ms-2" href="#">Register</a>
+            </div>
+            <div id="profileDiv" class="d-flex align-items-center ms-3">
+              <span class="text-white me-2">|</span>
+              <span class="text-white" id="username"></span>
+              <span class="text-white ms-2">|</span>
+              <i class="fa-regular fa-user text-white ms-2" onclick="logout()"></i>
+            </div>
+          </form>
         </div>
       </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="my-4">Shopping Cart</h1>
+    <div class="row">
+      <div class="col-md-8" id="cart">
+        <h2>Your Items</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="cart-items"></tbody>
+        </table>
+      </div>
+      <div class="col-md-4 summary">
+        <h2>Summary</h2>
+        <p>Total Items : <span id="total-items">0</span></p>
+        <p>Tax : $ 0.00</p>
+        <h3>Total : <span id="total-items-cost">0</span></h3>
+        <button class="btn btn-primary" onclick="alert('Not Have gateway yet!')">Checkout</button>
+      </div>
     </div>
-    <script src="../assets/dist/js/bootstrap.popper.min.js"></script>
-    <script src="../assets/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/auth.js"></script>
-    <script src="../assets/js/cart.js"></script>
-  </body>
+  </div>
+  <script src="../assets/dist/js/bootstrap.popper.min.js"></script>
+  <script src="../assets/dist/js/bootstrap.min.js"></script>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/cart.js"></script>
+</body>
+
 </html>
