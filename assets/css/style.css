@@ -54,6 +54,7 @@ a {
   cursor: pointer;
   animation: none;
   transform: scale(1.05);
+  transition: all 5s;
 }
 .activeCategory {
   border: 2px solid #000 !important;
