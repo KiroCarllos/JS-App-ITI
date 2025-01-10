@@ -30,7 +30,9 @@ function showProducts(products) {
     productDiv.className = "col-md-3";
     productDiv.innerHTML = `    
                   <div class="product">
-                  <img src="https://api.letsdonuts.net/${p.image}" class="card-img-top"
+                  <img src="https://api.letsdonuts.net/${
+                    p.image
+                  }" class="card-img-top"
                       alt="...">
                   <hr>
                   <div class="card-body">
@@ -39,10 +41,14 @@ function showProducts(products) {
                       <div class="row">
                           <div class="col-md-8 d-flex  align-items-center">
                               <small class="text-success ">$${p.price}</small>
-                              <small class="text-danger text-decoration-line-through ms-3">$${p.salePrice}</small>
+                              <small class="text-danger text-decoration-line-through ms-3">$${
+                                p.salePrice
+                              }</small>
                           </div>
                           <div class="col-md-4 d-flex justify-content-center align-items-center">
-                              <button class="btn btn-dark cart" onclick="addToCart(0)"><i
+                              <button class="btn btn-dark cart" onclick="addProductToCart('${
+                                p.id
+                              }','${p.nameEn}','${p.salePrice ?? p.price}')"><i
                                       class="fas fa-shopping-cart "></i></button>
                           </div>
                           <div class="col-md-12">

@@ -33,10 +33,6 @@ a {
   animation: bounce 1s infinite;
 }
 
-.categories h5:hover {
-  animation: none;
-  transform: scale(1.05);
-}
 @keyframes bounce {
   0%,
   100% {
@@ -49,8 +45,9 @@ a {
 }
 
 .categories h5:hover {
-  border: 2px solid #000;
   cursor: pointer;
+  animation: none;
+  transform: scale(1.05);
 }
 .activeCategory {
   border: 2px solid #000 !important;
