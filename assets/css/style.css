@@ -1,6 +1,19 @@
 * {
   font-family: "Cairo", sans-serif;
 }
+body {
+  animation: winter 20s linear infinite;
+  background-image: url(../images/3.png);
+}
+
+@keyframes winter {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
+}
 a {
   text-decoration: none;
 }
@@ -8,8 +21,8 @@ a {
   width: 600px;
   padding: 35px;
 }
-
 .categories h5 {
+  background: #fff;
   border: 2px solid #ccc;
   border-radius: 5px;
   text-align: center;
@@ -17,6 +30,22 @@ a {
   padding: 15px;
   margin-top: 15px;
   cursor: pointer;
+  animation: bounce 1s infinite;
+}
+
+.categories h5:hover {
+  animation: none;
+  transform: scale(1.05);
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
 }
 
 .categories h5:hover {
@@ -28,11 +57,20 @@ a {
 }
 
 .product {
+  background: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+.product {
+  transition: margin-top 0.3s ease;
+}
+
+/* .product:hover {
+  margin-top: 10px;
+} */
+
 .product img {
   height: 60%;
   object-fit: contain;
@@ -41,4 +79,40 @@ a {
   border-radius: 50%;
   background: none;
   color: #000;
+  animation: strongBounce 1s infinite;
+}
+
+.cart:hover {
+  animation: none;
+  transform: rotate(10deg);
+}
+
+@keyframes strongBounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(10deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-5px) rotate(-10deg);
+  }
+}
+
+/* Cart Page Styles */
+.container {
+  margin-top: 20px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  margin-top: 20px;
 }
