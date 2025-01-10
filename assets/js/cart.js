@@ -9,14 +9,14 @@ if (cart_items) {
       "<tr class='text-center'><td colspan='4'>No items in cart</td></tr>";
   } else {
     cart.forEach((item) => {
-      cart_items.createElement("tr");
-      cart_items.innerHTML = `<td>${item.name}</td>
+      cartRow = document.createElement("tr");
+      cartRow.innerHTML = `<td>${item.name}</td>
                                         <td>${item.price}</td>
                                         <td>${item.qty}</td>
                                         <td>${item.total}</td>
                                         <td><i class="fa-solid fa-trash text-danger"></i></td>`;
 
-      cart_items.appendChild(cart_items);
+      cart_items.appendChild(cartRow);
     });
   }
 }
