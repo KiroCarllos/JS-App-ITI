@@ -1,97 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sala App</title>
-    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/fonwawsome/all.css">
+    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonwawsome/all.css" />
+    <link rel="stylesheet" href="assets/css/landingStyle.css" />
+  </head>
 
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="/index.html">Lets Cookies</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Policy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reviews</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Our Partners</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex align-items-center">
-                        <a href="/pages/cart.html" class="position-relative me-3">
-                            <i class="fas fa-shopping-cart text-white"></i>
-                            <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                                id="cart-count"></span>
-                        </a>
-                        <div id="loginDiv" class="d-flex align-items-center">
-                            <a class="text-white me-2" href="/pages/login.html">Login</a>
-                            <span class="text-white">|</span>
-                            <a class="text-white ms-2" href="#">Register</a>
-                        </div>
-                        <div id="profileDiv" class="d-flex align-items-center ms-3">
-                            <span class="text-white me-2">|</span>
-                            <span class="text-white" id="username"></span>
-                            <span class="text-white ms-2">|</span>
-                            <i class="fa-regular fa-user text-white ms-2" onclick="logout()"></i>
-                        </div>
-                    </form>
-                </div>
+  <body>
+    <div class="lazy-page article-header">
+      <img class="header-image" src="./assets/./images/landing2.jpg" />
+      <div class="header-content container">
+        <div class="landing-text mb-5">
+          <h1 class="">Hello There</h1>
+          <p class="">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
+            eligendi Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Architecto, aut?
+          </p>
+          <a href="products.html" class="products-btn">Show Store</a>
+        </div>
+        <div class="empty"></div>
+      </div>
+    </div>
+    <div class="about">
+      <div
+        class="container m-auto gap-3 d-flex justify-content-center align-content-center gap-5"
+      >
+        <div
+          class="left d-flex align-content-center justify-content-center gap-2 flex-column"
+        >
+          <h2 class="in-view">Our Misson</h2>
+          <p class="light-text in-view">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            faucibus, justo vel vulputate consectetur, nunc mauris fermentum
+            nunc, ac bibendum sapien felis nec dui. Donec consectetur, ipsum vel
+            consectetur fermentum, felis purus gravida massa, at consectetur
+            risus urna et neque.Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Quisque faucibus, justo vel vulputate consectetur,
+            nunc mauris fermentum nunc, ac bibendum sapien felis nec dui. Donec
+            consectetur, ipsum vel consectetur fermentum, felis purus gravida
+            massa, at consectetur risus urna et neque.
+          </p>
+        </div>
+        <div class="right d-flex align-items-center">
+          <div class="image in-view">
+            <img src="./assets/images/storyImg1.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mission">
+      <div class="container m-auto">
+        <div
+          class="content d-flex align-content-center justify-content-center gap-4"
+        >
+          <div class="left d-flex align-items-center">
+            <div class="image in-view">
+              <img class="" src="./assets/images/cookie.png" alt="" />
             </div>
+          </div>
+          <div
+            class="right d-flex align-content-center justify-content-center gap-2 flex-column"
+          >
+            <h2 class="in-view">Our Story</h2>
+            <p class="text in-view">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              faucibus, justo vel vulputate consectetur, nunc mauris fermentum
+              nunc, ac bibendum sapien felis nec dui. Donec consectetur, ipsum
+              vel consectetur fermentum, felis purus gravida massa, at
+              consectetur risus urna et neque.Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Quisque faucibus, justo vel vulputate
+              consectetur, nunc mauris fermentum nunc, ac bibendum sapien felis
+              nec dui. Donec consectetur, ipsum vel consectetur fermentum, felis
+              purus gravida massa, at consectetur risus urna et neque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scrollerBox">
+      <div class="heading">
+        <div class="scroller">
+          <ul class="tag-list scroller-inner">
+            <li class="word">HTML</li>
+            <li class="word">CSS</li>
+            <li class="word">JS</li>
+            <li class="word">SSG</li>
+            <li class="word">webdev</li>
+            <li class="word">animation</li>
+            <li class="word">UI/UX</li>
+          </ul>
+        </div>
+        <div class="scroller" data-direction="right">
+          <ul class="tag-list scroller-inner">
+            <li class="word">HTML</li>
+            <li class="word">CSS</li>
+            <li class="word">JS</li>
+            <li class="word">SSG</li>
+            <li class="word">webdev</li>
+            <li class="word">animation</li>
+            <li class="word">UI/UX</li>
+            <li class="word">HTML</li>
+            <li class="word">CSS</li>
+            <li class="word">JS</li>
+            <li class="word">SSG</li>
+            <li class="word">webdev</li>
+            <li class="word">animation</li>
+            <li class="word">UI/UX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-title-wrapper">
+      <div class="footer-title-container">
+        <span class="line"></span>
+        <span class="title"
+          >Three Column Footer, with Icon and Company Name</span
+        >
+        <span class="line"></span>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <aside class="footer-brand">
+          <div class="footer-icon">
+            <img src="./assets/images/cookie.png" alt="" />
+          </div>
+          <p class="brand-text">
+            ATOMIC Industries Ltd.
+            <br />
+            Providing reliable atoms since 1945.
+          </p>
+        </aside>
+        <nav>
+          <h6 class="footer-heading">Services</h6>
+          <a class="footer-link">Branding</a>
+          <a class="footer-link">Design</a>
+          <a class="footer-link">Marketing</a>
+          <a class="footer-link">Advertisement</a>
         </nav>
-    </header>
-
-    <main>
-        <!-- categories -->
-        <section>
-            <div class="container">
-                <div class="row categories" id="categories">
-                    <div class="col-md-3">
-                        <h5 id="category_3" onclick="addActiveCategory(3)">All Categories</h5>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- products -->
-        <section>
-            <div class="container">
-                <div class="row my-5 gy-3" id="products">
-
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-
-
+        <nav>
+          <h6 class="footer-heading">Company</h6>
+          <a class="footer-link">About us</a>
+          <a class="footer-link">Contact</a>
+          <a class="footer-link">Jobs</a>
+          <a class="footer-link">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-heading">Legal</h6>
+          <a class="footer-link">Terms of use</a>
+          <a class="footer-link">Privacy policy</a>
+          <a class="footer-link">Cookie policy</a>
+        </nav>
+      </div>
     </footer>
+
     <script src="assets/dist/js/bootstrap.popper.min.js"></script>
     <script src="assets/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/categories.js"></script>
@@ -99,6 +165,6 @@
     <script src="assets/js/products.js"></script>
     <script src="assets/js/cart.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="assets/js/landingPage.js"></script>
+  </body>
 </html>
