@@ -1,73 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/fonwawsome/all.css" />
-  </head>
 
-  <body>
-    <main>
-      <div class="d-flex align-items-center" style="height: 100vh">
-        <div class="card mx-auto">
-          <small id="invalidForm" class="form-text text-danger d-none"></small>
-          <form class="login-form">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                name="loginEmail"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-              <small
-                id="invalidEmail"
-                class="form-text text-danger d-none"
-              ></small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                name="loginPassword"
-                id="exampleInputPassword1"
-                placeholder="Password"
-              />
-              <small
-                id="invalidPassword"
-                class="form-text text-danger d-none"
-              ></small>
-            </div>
-            <br />
-            <div class="form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
-            </div>
-            <br />
-            <button
-              type="button"
-              id="loginBtn"
-              class="btn btn-primary btn-block"
-            >
-              Login
-            </button>
-          </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="/assets/fonwawsome/all.css" />
+  <link rel="stylesheet" type="text/css" href="/output.css">
+</head>
+
+<body class="animate-winter bg-[url('/assets/images/3.png')] ">
+  <main>
+    <form action="" class="w-1/2 m-auto border-8 p-5 mt-5 rounded-md bg-white">
+      <div id="invalidForm" class="text-red-600 hidden"></div>
+      <div class="mt-5">
+        <label for="exampleInputEmail1" class="block text-sm/6 font-medium text-gray-900">Enter Your Email</label>
+        <div class="mt-2">
+          <div
+            class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+            <input type="email" name="loginEmail" id="exampleInputEmail1"
+              class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+              placeholder="Enter email">
+          </div>
+          <div id="invalidEmail" class="text-red-600 hidden"></div>
         </div>
       </div>
-    </main>
+      <div class="mt-5">
+        <label for="exampleInputPassword1" class="block text-sm/6 font-medium text-gray-900">Enter Your Password</label>
+        <div class="mt-2">
+          <div
+            class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+            <input type="password" name="loginEmail" id="exampleInputPassword1"
+              class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+              placeholder="Enter Password">
+          </div>
+          <div id="invalidPassword" class="text-red-600 hidden"></div>
+        </div>
+      </div>
+      <div class="mt-5">
+        <button type="button" id="loginBtn"
+          class="inline-block rounded bg-blue-400 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-info-3 transition duration-150 ease-in-out hover:bg-info-accent-300 hover:shadow-info-2 focus:bg-info-accent-300 focus:shadow-info-2 focus:outline-none focus:ring-0 active:bg-info-600 active:shadow-info-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
+          Info
+        </button>
+      </div>
 
-    <script src="../assets/js/login.js"></script>
-  </body>
+    </form>
+    <!-- <div class="d-flex align-items-center" style="height: 100vh">
+      <div class="card mx-auto">
+        <small id="invalidForm" class="form-text text-danger d-none"></small>
+        <form class="login-form">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input id="exampleInputEmail1" name="loginEmail" type="email" placeholder="you@example.com"
+              class="ky vo agd aoc aty auk ayn baw bhh bhj bhm bqb bzm bzo bzv czw">
+            <small id="invalidEmail" class="form-text text-danger d-none"></small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" name="loginPassword" id="exampleInputPassword1"
+              placeholder="Password" />
+            <small id="invalidPassword" class="form-text text-danger d-none"></small>
+          </div>
+          <br />
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <br />
+          <button type="button" id="loginBtn" class="btn btn-primary btn-block">
+            Login
+          </button>
+        </form>
+      </div>
+    </div> -->
+  </main>
+
+  <script src="/assets/js/login.js"></script>
+</body>
+
 </html>
