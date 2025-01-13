@@ -41,8 +41,8 @@ function showProducts(products) {
                       <div class="row">
                           <div class="col-md-8 d-flex  align-items-center">
                               <small class="text-success ">$${p.price}</small>
-                              <small class="text-danger text-decoration-line-through ms-3">$${
-                                p.salePrice
+                              <small class="text-danger text-decoration-line-through ms-3"> ${
+                                p.salePrice ? "$" + p.salePrice : ""
                               }</small>
                           </div>
                           <div class="col-md-4 d-flex justify-content-center align-items-center">
