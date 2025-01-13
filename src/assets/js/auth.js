@@ -11,11 +11,11 @@ function isLogin() {
 
 if (user) {
   username.innerHTML = user.username;
-  loginDiv.classList.add("d-none");
-  profileDiv.classList.remove("d-none");
+  loginDiv.classList.add("hidden");
+  profileDiv.classList.remove("hidden");
 } else {
-  loginDiv.classList.remove("d-none");
-  profileDiv.classList.add("d-none");
+  loginDiv.classList.remove("hidden");
+  profileDiv.classList.add("hidden");
 }
 
 function logout() {

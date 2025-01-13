@@ -1,101 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sala App</title>
+    <!-- <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" /> -->
+    <link rel="stylesheet" href="assets/fonwawsome/all.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sala App</title>
-  <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/fonwawsome/all.css" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
 
-
-  <!-- <link rel="stylesheet" href="output.css"> -->
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="/index.html">Lets Cookies</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Policy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reviews</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Our Partners</a>
-            </li>
-          </ul>
-          <form class="d-flex align-items-center">
-            <a href="/pages/cart.html" class="position-relative me-3">
-              <i class="fas fa-shopping-cart text-white"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                id="cart-count"></span>
-            </a>
-            <div id="loginDiv" class="d-flex align-items-center">
-              <a class="text-white me-2" href="/pages/login.html">Login</a>
-              <span class="text-white">|</span>
-              <a class="text-white ms-2" href="#">Register</a>
-            </div>
-            <div id="profileDiv" class="d-flex align-items-center ms-3">
-              <span class="text-white me-2">|</span>
-              <span class="text-white" id="username"></span>
-              <span class="text-white ms-2">|</span>
-              <i class="logout fa-solid fa-right-from-bracket text-white ms-2" onclick="logout()"></i>
-            </div>
-          </form>
+  <body>
+    <header>
+      <nav
+        class="relative px-4 py-4 flex justify-between items-center bg-black"
+      >
+        <a class="text-3xl font-bold leading-none text-white" href="/">
+          Lets-Cookies
+        </a>
+        <div class="lg:hidden">
+          <button class="navbar-burger flex items-center text-blue-600 p-3">
+            <svg
+              class="block h-4 w-4 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
         </div>
-      </div>
-    </nav>
-  </header>
+        <ul
+          class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
+        >
+          <li>
+            <a class="text-sm text-gray-400 hover:text-gray-500" href="/"
+              >Home</a
+            >
+          </li>
+          <li class="text-gray-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              class="w-4 h-4 current-fill"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+              />
+            </svg>
+          </li>
+          <li>
+            <a class="text-sm text-blue-600 font-bold" href="#">About Us</a>
+          </li>
+          <li class="text-gray-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              class="w-4 h-4 current-fill"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+              />
+            </svg>
+          </li>
+          <li>
+            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
+              >Services</a
+            >
+          </li>
+          <li class="text-gray-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              class="w-4 h-4 current-fill"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+              />
+            </svg>
+          </li>
+          <li>
+            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
+              >Pricing</a
+            >
+          </li>
+          <li class="text-gray-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              class="w-4 h-4 current-fill"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+              />
+            </svg>
+          </li>
+          <li>
+            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
+              >Contact</a
+            >
+          </li>
+        </ul>
 
-  <main>
-    <!-- categories -->
-    <section>
-      <div class="container">
-        <div class="row categories" id="categories">
-          <div class="col-md-3">
-            <h5 id="category_3" onclick="addActiveCategory(3)">
-              All Categories
-            </h5>
+        <form class="flex justify-items-center items-center">
+          <a href="/pages/cart.html" class="position-relative me-3">
+            <i class="fas fa-shopping-cart text-white"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              id="cart-count"
+            ></span>
+          </a>
+
+          <div id="loginDiv" class="flex items-center">
+            <a
+              class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+              href="/pages/login.html"
+              >Sign In</a
+            >
+            <span class="text-white">|</span>
+
+            <a
+              class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
+              href="#"
+              >Register</a
+            >
+          </div>
+          <div id="profileDiv">
+            <span class="text-white mr-2">|</span>
+            <span class="text-white" id="username"></span>
+            <span class="text-white ml-2">|</span>
+            <a
+              class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+              href="#"
+              onclick="logout()"
+            >
+              <i
+                class="cursor-pointer fa-solid fa-right-from-bracket text-white ml-2"
+              ></i
+            ></a>
+          </div>
+        </form>
+      </nav>
+    </header>
+
+    <main>
+      <!-- categories -->
+      <section>
+        <div class="container">
+          <div class="row categories" id="categories">
+            <div class="col-md-3">
+              <h5 id="category_3" onclick="addActiveCategory(3)">
+                All Categories
+              </h5>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- products -->
-    <section>
-      <div class="container">
-        <div class="row my-5 gy-3" id="products"></div>
-      </div>
-    </section>
-  </main>
+      </section>
+      <!-- products -->
+      <section>
+        <div class="container">
+          <div class="row my-5 gy-3" id="products"></div>
+        </div>
+      </section>
+    </main>
 
-  <footer class="footer bg-dark text-white text-center py-3"></footer>
+    <footer class="footer bg-dark text-white text-center py-3"></footer>
 
-  <script src="assets/dist/js/bootstrap.popper.min.js"></script>
-  <script src="assets/dist/js/bootstrap.min.js"></script>
-  <script src="assets/js/categories.js"></script>
-  <script src="assets/js/auth.js"></script>
-  <script src="assets/js/products.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="assets/js/categories.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
