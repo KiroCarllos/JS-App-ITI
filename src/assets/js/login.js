@@ -18,15 +18,15 @@ function validateEmail(email) {
 
   if (!email) {
     invalidEmail.innerHTML = " please enter your email";
-    invalidEmail.classList.remove("d-none");
+    invalidEmail.classList.remove("hidden");
     return false;
   }
   if (regex.test(email)) {
-    invalidEmail.classList.add("d-none");
+    invalidEmail.classList.add("hidden");
     return true;
   } else {
     invalidEmail.innerHTML = "enter valid email -> nour2@gmail.com ";
-    invalidEmail.classList.remove("d-none");
+    invalidEmail.classList.remove("hidden");
     return false;
   }
 }
@@ -38,31 +38,31 @@ function validatePassword(password) {
   var Sregex = /[#@_$&]+/;
   var fRegex = /[a-zA-Z0-9_#@]{6,12}$/;
   if (!password) {
-    invalidPassword.classList.remove("d-none");
+    invalidPassword.classList.remove("hidden");
     invalidPassword.innerHTML = "please enter  password";
     return false;
   } else if (!Cregex.test(password)) {
-    invalidPassword.classList.remove("d-none");
+    invalidPassword.classList.remove("hidden");
     invalidPassword.innerHTML = "please enter capitalize char";
     return false;
   } else if (!cregex.test(password)) {
-    invalidPassword.classList.remove("d-none");
+    invalidPassword.classList.remove("hidden");
     invalidPassword.innerHTML = "please enter small char";
     return false;
   } else if (!nregex.test(password)) {
-    invalidPassword.classList.remove("d-none");
+    invalidPassword.classList.remove("hidden");
     invalidPassword.innerHTML = "please enter number";
     return false;
   } else if (!Sregex.test(password)) {
-    invalidPassword.classList.remove("d-none");
+    invalidPassword.classList.remove("hidden");
     invalidPassword.innerHTML = "please enter special char";
     return false;
   } else if (!fRegex.test(password)) {
-    invalidPassword.classList.remove("d-none");
+    invalidPassword.classList.remove("hidden");
     invalidPassword.innerHTML = "please enter  6-12char ";
     return false;
   } else {
-    invalidPassword.classList.add("d-none");
+    invalidPassword.classList.add("hidden");
     return true;
   }
 }
@@ -91,11 +91,11 @@ function login(email, password) {
             localStorage.setItem("user", JSON.stringify(user));
             window.location.href = "/index.html";
           } else {
-            invalidForm.classList.remove("d-none");
+            invalidForm.classList.remove("hidden");
             invalidForm.innerHTML = "sorry user not found";
           }
         } else {
-          invalidForm.classList.remove("d-none");
+          invalidForm.classList.remove("hidden");
           invalidForm.innerHTML = response.message;
         }
       } catch (e) {
