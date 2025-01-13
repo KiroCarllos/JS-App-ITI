@@ -77,14 +77,14 @@ exampleInputEmail1.addEventListener("input", function () {
 
 function login(email, password) {
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://127.0.0.1:5500/assets/api/users.json", true);
+  xhr.open("GET", "http://127.0.0.1:3000/users", true);
 
   xhr.onload = function () {
     if (this.status === 200) {
       try {
         const response = JSON.parse(this.responseText);
-        if (response.status == "success") {
-          var user = response.data.find(
+        if (xhr.status == 200) {
+          var user = response.find(
             (user) => user.email == email && user.password == password
           );
           if (user) {

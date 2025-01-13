@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "username": "Nour",
+      "email": "nour2@gmail.com",
+      "phone": "1234567890",
+      "password": "123456aA#",
+      "role": "super_admin",
+      "image": "https://kirellos.com/assets/img/profile_image.png",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "username": "Amr",
+      "email": "Amr@gmail.com",
+      "phone": "1234567890",
+      "password": "123456",
+      "role": "client",
+      "image": "https://kirellos.com/assets/img/profile_image.png"
+    },
+    {
+      "id": "8b7b",
+      "username": "aaaa",
+      "email": "Amr@gmail.com",
+      "phone": "1234567890",
+      "password": "123456",
+      "role": "client",
+      "image": "https://kirellos.com/assets/img/profile_image.png"
+    },
+    {
+      "id": "9dcd",
+      "username": "Kiro",
+      "email": "carloskiro217@gmail.com",
+      "phone": "1234567890",
+      "password": "123456aA#",
+      "role": "super_admin",
+      "image": "https://kirellos.com/assets/img/profile_image.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": "0",
+      "name": "Cookies",
+      "image": "https://kirellos.com/assets/img/profile_image.png"
+    },
+    {
+      "id": "1",
+      "name": "Donates",
+      "image": "https://kirellos.com/assets/img/profile_image.png"
+    },
+    {
+      "id": "2",
+      "name": "Toppings",
+      "image": "https://kirellos.com/assets/img/profile_image.png"
+    }
+  ]
+}

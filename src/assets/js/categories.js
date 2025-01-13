@@ -2,12 +2,12 @@ var carDiv = document.getElementById("categories");
 var categories = [];
 function getCategories() {
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://127.0.0.1:5500/assets/api/categories.json", true);
+  xhr.open("GET", "http://127.0.0.1:3000/categories", true);
   xhr.onload = function () {
     try {
       const response = JSON.parse(this.responseText);
-      if (response.status == "success") {
-        response.data.forEach((category) => {
+      if (xhr.status == 200) {
+        response.forEach((category) => {
           var categoryDiv = document.createElement("div");
           categoryDiv.className = "col-md-3";
           categoryDiv.innerHTML = ` <h5 id="category_${category.id}" onclick="addActiveCategory(${category.id})" class="card-title">${category.name}</h5>`;
