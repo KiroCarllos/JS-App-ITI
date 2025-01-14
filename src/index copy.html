@@ -4,48 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sala App</title>
-    <!-- <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" /> -->
-    <!-- <link rel="stylesheet" href="assets/fonwawsome/all.css" /> -->
+    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fonwawsome/all.css" />
     <link rel="stylesheet" href="assets/css/landingStyle.css" />
-    <link rel="stylesheet" href="./output.css" />
   </head>
 
-  <body class="bg-[#192332] overflow-x-clip m-0">
-    <div class="grid place-items-center relative h-svh py-28 mb-0 sm:mb-12">
-      <img
-        class="header-image col-span-full absolute inset-0 w-full h-full opacity-30 object-cover -z-10"
-        src="./assets/./images/landing2.jpg"
-      />
-      <div class="flex container justify-center md:justify-stretch px-6">
-        <div
-          class="landing-text flex flex-col justify-center gap-2 text-white w-4/5 md:w-3/5 lg:w-2/5 md:text-left text-center items-center md:items-stretch relative mb-24 z-50"
-        >
-          <h1 class="font-black text-[3.5em]">Hello There</h1>
-          <p class="landing-paragraph text-[0.9em] text-left">
+  <body>
+    <div class="lazy-page article-header">
+      <img class="header-image" src="./assets/./images/landing2.jpg" />
+      <div class="header-content container">
+        <div class="landing-text mb-5">
+          <h1 class="">Hello There</h1>
+          <p class="landing-paragraph">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
             eligendi Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Architecto, aut?
           </p>
-          <a
-            href="products.html"
-            class="products-btn px-2 py-3 border-2 border-white border-solid w-fit text-white font-bold transition duration-300 hover:bg-[#192332] hover:border-[#131010]"
-            >Show Store</a
-          >
+          <a href="products.html" class="products-btn">Show Store</a>
         </div>
-        <div class="flex-1 hidden md:block"></div>
+        <div class="empty"></div>
       </div>
     </div>
-    <div
-      class="about text-white py-28 flex-col md:flex-row items-center md:items-stretch"
-    >
+    <div class="about">
       <div
-        class="container m-auto flex justify-center items-center gap-6 flex-col md:flex-row"
+        class="container m-auto gap-3 d-flex justify-content-center align-content-center gap-5"
       >
         <div
-          class="left flex items-center md:items-start justify-center gap-2 flex-col order-2 md:order-1 text-center md:text-left w-auto md:w-1/2"
+          class="left d-flex align-content-center justify-content-center gap-2 flex-column"
         >
-          <!-- <h2 class="in-view scale-75 opacity-0 font-black text-4xl"> -->
-          <h2 class="in-view font-black text-3xl">Our Misson</h2>
+          <h2 class="in-view">Our Misson</h2>
           <p class="light-text in-view">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             faucibus, justo vel vulputate consectetur, nunc mauris fermentum
@@ -58,30 +45,28 @@
             massa, at consectetur risus urna et neque.
           </p>
         </div>
-        <div class="right d-flex align-items-center w-3/5 order-1 md:w-2/5">
-          <div class="image in-view opacity-0 w-[100%] md:w-[90%]">
+        <div class="right d-flex align-items-center">
+          <div class="image in-view">
             <img src="./assets/images/storyImg1.png" alt="" />
           </div>
         </div>
       </div>
     </div>
-    <div class="mission py-28 text-white bg-white">
+    <div class="mission">
       <div class="container m-auto">
         <div
-          class="content flex items-center md:items-stretch justify-center gap-4 flex-col md:flex-row"
+          class="content d-flex align-content-center justify-content-center gap-4"
         >
-          <div class="left w-3/5 md:w-2/5 order-1 flex items-center">
-            <div class="image in-view w-[60%] m-auto opacity-0">
+          <div class="left d-flex align-items-center">
+            <div class="image in-view">
               <img class="" src="./assets/images/cookie.png" alt="" />
             </div>
           </div>
           <div
-            class="right flex items-center md:items-start justify-center order-2 text-center md:text-left w-auto gap-2 flex-col md:w-2/5"
+            class="right d-flex align-content-center justify-content-center gap-2 flex-column"
           >
-            <h2 class="in-view font-black text-[#131010] text-3xl">
-              Our Story
-            </h2>
-            <p class="text in-view text-[#131010]">
+            <h2 class="in-view">Our Story</h2>
+            <p class="text in-view">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
               faucibus, justo vel vulputate consectetur, nunc mauris fermentum
               nunc, ac bibendum sapien felis nec dui. Donec consectetur, ipsum
@@ -173,6 +158,13 @@
       </div>
     </footer>
 
+    <script src="assets/dist/js/bootstrap.popper.min.js"></script>
+    <script src="assets/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/categories.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/landingPage.js"></script>
   </body>
 </html>
