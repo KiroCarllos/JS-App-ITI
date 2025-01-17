@@ -57,7 +57,7 @@ a {
   transform: scale(1.05);
   transition: all 5s;
 }
-.activeCategory {
+.active-category {
   border: 2px solid #000 !important;
 }
 

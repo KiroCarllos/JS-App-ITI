@@ -1,0 +1,18 @@
+@import url("../fonwawsome/all.css") layer(fonwawsome);
+@import url("./output.css") layer(tailwind);
+@layer site {
+  * {
+    font-family: "Cairo", sans-serif;
+  }
+  body {
+    animation: winter 20s linear infinite;
+    background-image: url(../images/3.png);
+  }
+  .active-category {
+    border: 2px solid #000 !important;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -21,12 +21,13 @@ module.exports = {
           },
         },
       },
+
       animation: {
         winter: "winter 20s linear infinite",
         bounce: "bounce 1s infinite",
       },
       backgroundImage: {
-        winter: "url('/assets/images/3.png')",
+        winter: "url('/11.jpg')",
       },
     },
   },
