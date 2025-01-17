@@ -6,6 +6,7 @@ module.exports = {
       center: true, // Centers the container by default
       padding: "1rem", // Adds default horizontal padding
       screens: {
+        xs: "480px",
         sm: "600px", // Applies when min-width is 640px
         md: "728px", // Applies when min-width is 768px
         lg: "984px", // Applies when min-width is 1024px

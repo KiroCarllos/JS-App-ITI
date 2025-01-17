@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="text-[12px] sm:text-[14px] md:text-[16px]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +13,12 @@
   <body class="bg-[#192332] overflow-x-clip m-0">
     <div class="grid place-items-center relative h-svh py-28 mb-0 sm:mb-12">
       <img
-        class="header-image col-span-full absolute inset-0 w-full h-full opacity-30 object-cover -z-10"
+        class="header-image headerImageAnimation col-span-full absolute inset-0 w-full h-full opacity-30 object-cover -z-10"
         src="./assets/./images/landing2.jpg"
       />
       <div class="flex container justify-center md:justify-stretch px-6">
         <div
-          class="landing-text flex flex-col justify-center gap-2 text-white w-4/5 md:w-3/5 lg:w-2/5 md:text-left text-center items-center md:items-stretch relative mb-24 z-50"
+          class="landing-text animate-fadeOut flex flex-col justify-center gap-2 text-white w-4/5 md:w-3/5 lg:w-2/5 md:text-left text-center items-center md:items-stretch relative mb-24 z-50"
         >
           <h1 class="font-black text-[3.5em]">Hello There</h1>
           <p class="landing-paragraph text-[0.9em] text-left">
@@ -45,7 +45,7 @@
           class="left flex items-center md:items-start justify-center gap-2 flex-col order-2 md:order-1 text-center md:text-left w-auto md:w-1/2"
         >
           <!-- <h2 class="in-view scale-75 opacity-0 font-black text-4xl"> -->
-          <h2 class="in-view font-black text-3xl">Our Misson</h2>
+          <h2 class="in-view font-black text-3xl">Our Mission</h2>
           <p class="light-text in-view">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             faucibus, justo vel vulputate consectetur, nunc mauris fermentum
@@ -96,79 +96,197 @@
         </div>
       </div>
     </div>
-    <div class="scrollerBox">
+    <div class="bg-[#192332] py-28">
       <div class="heading">
-        <div class="scroller">
-          <ul class="tag-list scroller-inner">
-            <li class="word">HTML</li>
-            <li class="word">CSS</li>
-            <li class="word">JS</li>
-            <li class="word">SSG</li>
-            <li class="word">webdev</li>
-            <li class="word">animation</li>
-            <li class="word">UI/UX</li>
+        <div
+          class="scroller m-auto max-w-[600px] text-white overflow-wrap mask-gradient mask"
+        >
+          <ul
+            class="tag-list scroller-inner m-auto px-0 list-none flex gap-4 py-4"
+          >
+            <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">HTML</li>
+            <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">CSS</li>
+            <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">JS</li>
+            <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">SSG</li>
+            <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">webdev</li>
+            <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">
+              animation
+            </li>
+            <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">UI/UX</li>
           </ul>
         </div>
-        <div class="scroller" data-direction="right">
-          <ul class="tag-list scroller-inner">
-            <li class="word">HTML</li>
-            <li class="word">CSS</li>
-            <li class="word">JS</li>
-            <li class="word">SSG</li>
-            <li class="word">webdev</li>
-            <li class="word">animation</li>
-            <li class="word">UI/UX</li>
-            <li class="word">HTML</li>
-            <li class="word">CSS</li>
-            <li class="word">JS</li>
-            <li class="word">SSG</li>
-            <li class="word">webdev</li>
-            <li class="word">animation</li>
-            <li class="word">UI/UX</li>
+        <div
+          class="scroller m-auto max-w-[600px] text-white overflow-wrap mask-gradient mask"
+          data-direction="right"
+        >
+          <ul
+            class="tag-list scroller-inner m-auto px-0 list-none flex gap-4 py-4"
+          >
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              HTML
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              CSS
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              JS
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              SSG
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              webdev
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              animation
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              UI/UX
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              HTML
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              CSS
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              JS
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              SSG
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              webdev
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              animation
+            </li>
+            <li
+              class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg"
+            >
+              UI/UX
+            </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="footer-title-wrapper">
-      <div class="footer-title-container">
-        <span class="line"></span>
-        <span class="title"
+    <div class="footer-title-wrapper w-full flex justify-center py-8 bg-white">
+      <div
+        class="footer-title-container w-4/5 flex items-center justify-center gap-5"
+      >
+        <span class="line h-[1px] flex-1 bg-[#333333]"></span>
+        <span class="title text-[#333333] whitespace-nowrap text-xl"
           >Three Column Footer, with Icon and Company Name</span
         >
-        <span class="line"></span>
+        <span class="line h-[1px] flex-1 bg-[#333333]"></span>
       </div>
     </div>
-    <footer class="footer">
-      <div class="footer-content">
-        <aside class="footer-brand">
-          <div class="footer-icon">
+    <footer class="footer bg-[#192332] py-10 sm:m-20">
+      <div
+        class="footer-content flex flex-col md:flex-row justify-between max-w-[1200px] mx-auto p-5 md:py-0 sm:px-20 gap-10 md:gap-20"
+      >
+        <aside
+          class="footer-brand flex flex-col gap-3 items-center text-center"
+        >
+          <div class="footer-icon inline-block w-40 h-40 md:w-20 md:h-20">
             <img src="./assets/images/cookie.png" alt="" />
           </div>
-          <p class="brand-text">
+          <p class="brand-text text-white text-lg sm:text-base md:text-sm">
             ATOMIC Industries Ltd.
             <br />
             Providing reliable atoms since 1945.
           </p>
         </aside>
-        <nav>
-          <h6 class="footer-heading">Services</h6>
-          <a class="footer-link">Branding</a>
-          <a class="footer-link">Design</a>
-          <a class="footer-link">Marketing</a>
-          <a class="footer-link">Advertisement</a>
+        <nav class="flex flex-col gap-3">
+          <h6
+            class="footer-heading text-white text-lg md:text-base font-semibold uppercase mb-3"
+          >
+            Services
+          </h6>
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Branding</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Design</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Marketing</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Advertisement</a
+          >
         </nav>
-        <nav>
-          <h6 class="footer-heading">Company</h6>
-          <a class="footer-link">About us</a>
-          <a class="footer-link">Contact</a>
-          <a class="footer-link">Jobs</a>
-          <a class="footer-link">Press kit</a>
+        <nav class="flex flex-col gap-3">
+          <h6
+            class="footer-heading text-white text-lg md:text-base font-semibold uppercase mb-3"
+          >
+            Company
+          </h6>
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >About us</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Contact</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Jobs</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Press kit</a
+          >
         </nav>
-        <nav>
-          <h6 class="footer-heading">Legal</h6>
-          <a class="footer-link">Terms of use</a>
-          <a class="footer-link">Privacy policy</a>
-          <a class="footer-link">Cookie policy</a>
+        <nav class="flex flex-col gap-3">
+          <h6
+            class="footer-heading text-white text-lg md:text-base font-semibold uppercase mb-3"
+          >
+            Legal
+          </h6>
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Terms of use</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Privacy policy</a
+          >
+          <a
+            class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm"
+            >Cookie policy</a
+          >
         </nav>
       </div>
     </footer>
