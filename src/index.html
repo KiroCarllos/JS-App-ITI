@@ -31,7 +31,7 @@
               class="h-full"
             />
           </div>
-          <div class="controllers flex gap-6 items-center">
+          <div class="hidden controllers md:flex gap-6 items-center">
             <div class="links">
               <ul class="flex gap-2">
                 <li class="py-3 px-2">
@@ -61,6 +61,15 @@
               </button>
             </div>
           </div>
+          <div
+            class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300"
+          >
+            <div class="w-full h-[2px] bg-white rounded-lg"></div>
+            <div class="w-full h-[2px] bg-white rounded-lg"></div>
+            <div
+              class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-white rounded-lg"
+            ></div>
+          </div>
         </div>
       </nav>
       <nav
@@ -84,7 +93,7 @@
               class="h-full"
             />
           </div>
-          <div class="controllers flex gap-6 items-center">
+          <div class="controllers hidden md:flex gap-6 items-center">
             <div class="links">
               <ul class="flex gap-2">
                 <li class="py-3 px-2">
@@ -114,8 +123,35 @@
               </button>
             </div>
           </div>
+          <div
+            class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300"
+          >
+            <div class="w-full h-[2px] bg-black rounded-lg"></div>
+            <div class="w-full h-[2px] bg-black rounded-lg"></div>
+            <div
+              class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-black rounded-lg"
+            ></div>
+          </div>
         </div>
       </nav>
+      <div
+        class="mobile-links hidden top-0 left-0 h-full w-full z-30 bg-white pt-20"
+      >
+        <ul class="flex flex-col gap-6 items-center justify-center">
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">Products</a>
+          </li>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">About</a>
+          </li>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">Reviews</a>
+          </li>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">Contact Us</a>
+          </li>
+        </ul>
+      </div>
       <img
         class="header-image headerImageAnimation col-span-full absolute inset-0 w-full h-full opacity-30 object-cover -z-10"
         src="./assets/./images/landing2.jpg"

@@ -511,3 +511,10 @@ nav.fixed .links li a::after {
 nav.fixed.active {
   transform: translateY(0);
 }
+
+nav .burger-icon.active {
+  transform: rotate(90deg);
+}
+nav .burger-icon.active div:nth-child(3) {
+  transform: scaleX(1);
+}
