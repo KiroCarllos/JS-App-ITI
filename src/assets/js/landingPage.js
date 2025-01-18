@@ -98,8 +98,8 @@ function toggleMobileLinks() {
       mobileLinks.classList.remove("fixed");
       mobileLinks.classList.add("hidden");
       window.addEventListener("scroll", handleScroll);
+      checkScroll();
     }
-    checkScroll();
   } else {
     mobileLinks.classList.remove("fixed");
     mobileLinks.classList.add("hidden");
