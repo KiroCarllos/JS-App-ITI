@@ -18,16 +18,16 @@ function showCart() {
                                           item.price
                                         }</td>
                                       <td>  
-                                       <div class="cart-operators p-5  ">
+                                       <div class="cart-operators p-5 ">
                                          <i onclick="addProductToCart('${
                                            item.item_id
                                          }','${item.name}','${
           item.price
-        }','decrease');showCart()" class="fa-solid fa-minus cursor-pointer  text-white bg-red-500"></i>
+        }','decrease');showCart()" class="fa-solid fa-minus cursor-pointer  text-white bg-red-500  w-6 h-6 rounded-full text-center" style="dis"></i>
                                           ${item.qty}
                                          <i onclick="addProductToCart('${
                                            item.item_id
-                                         }');showCart()"  class="fa-solid fa-plus cursor-pointer  text-white bg-lime-700"></i>
+                                         }');showCart()"  class="fa-solid fa-plus cursor-pointer  text-white bg-green-700 rounded-full w-6 h-6 flex items-center justify-center text-center before:top-1 "></i>
                                        </div>
                                       </td>
                                       </td>
@@ -42,7 +42,7 @@ function showCart() {
 }
 getCartDetails();
 function getCartDetails() {
-  document.getElementById("cart-count").innerHTML = cart.length;
+  document.querySelector("[data-cart]").innerHTML = cart.length;
   return cart;
 }
 calcSummary();

@@ -1,6 +1,6 @@
 var user = localStorage.getItem("user");
 var username = document.getElementById("username");
-var loginDiv = document.getElementById("loginDiv");
+var loginDiv = document.querySelector("[data-loginDiv]");
 var profileDiv = document.getElementById("profileDiv");
 
 var user = JSON.parse(user);
