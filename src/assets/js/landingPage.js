@@ -11,8 +11,6 @@ function addAnimation() {
 
 const scrollerInner = document.querySelector(".scroller-inner");
 const scrollerContent = Array.from(scrollerInner.children);
-console.log(scrollerInner);
-console.log(scrollerContent);
 scrollerContent.forEach((item) => {
   const duplicatedItem = item.cloneNode(true);
   duplicatedItem.setAttribute("aria-hidden", true);
