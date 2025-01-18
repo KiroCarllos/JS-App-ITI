@@ -14,23 +14,25 @@ function showCart() {
       cart.forEach((item) => {
         cartRow = document.createElement("tr");
         cartRow.innerHTML = `<td  >${item.name}</td>
-                                        <td>${item.price}</td>
+                                        <td class="text-center ">${
+                                          item.price
+                                        }</td>
                                       <td>  
-                                       <div class="cart-operators">
+                                       <div class="cart-operators p-5  ">
                                          <i onclick="addProductToCart('${
                                            item.item_id
                                          }','${item.name}','${
           item.price
-        }','decrease');showCart()" class="fa-solid fa-minus bg-danger"></i>
+        }','decrease');showCart()" class="fa-solid fa-minus cursor-pointer  text-white bg-red-500"></i>
                                           ${item.qty}
                                          <i onclick="addProductToCart('${
                                            item.item_id
-                                         }');showCart()"  class="fa-solid fa-plus bg-success"></i>
+                                         }');showCart()"  class="fa-solid fa-plus cursor-pointer  text-white bg-lime-700"></i>
                                        </div>
                                       </td>
                                       </td>
                                         <td>$ ${item.total.toFixed(2)}</td>
-                                        <td ><i id="trash" class="fa-solid fa-trash text-danger " onclick="deleteProductToCart('${
+                                        <td ><i id="trash" class="fa-solid fa-trash cursor-pointer  text-red-600 flex justify-center " onclick="deleteProductToCart('${
                                           item.item_id
                                         }')"></i></td>`;
         cart_items.appendChild(cartRow);

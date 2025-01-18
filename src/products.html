@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sala App</title>
+  <link rel="stylesheet" href="assets/css/site.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="grid place-items-center relative  py-14 mb-0 sm:mb-12">
+      <nav class="absolute top-0 left-0 h-16 w-full z-40">
+        <div class="layout w-full h-full absolute bg-black opacity-20 z-10"></div>
+        <div class="container h-full relative z-20 flex justify-between items-center">
+          <div class="logo h-full p-3 flex gap-2">
+            <a href="/"><img class="h-full" src="./assets/images/logo/Lets__3_-removebg-preview.png" alt="Logo" /></a>
+            <a href="/"> <img src="./assets/images/logo/logo text white.png" alt="" class="h-full" /></a>
+          </div>
+          <div class="hidden controllers md:flex gap-6 items-center">
+            <div class="links">
+              <ul class="flex gap-2">
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="products.html">Products</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="">About</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="">Reviews</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="btns flex justify-center items-center gap-4" id="loginDiv">
+              <button
+                class="login btn text-white hover:text-black hover:bg-white transition duration-300 py-2 px-3 font-bold rounded-lg border-2"
+                onclick="window.location.href='../pages/login.html'">
+                Login
+              </button>
+              <button class="signup btn bg-white text-black font-bold py-2 px-3 rounded-lg border-2">
+                Sign Up
+              </button>
+            </div>
+            <div id="profileDiv">
+              <span class="text-white me-2">|</span>
+              <span class="text-white" id="username"></span>
+              <span class="text-white ms-2">|</span>
+              <i class="logout fa-solid fa-right-from-bracket text-white ms-2" onclick="logout()"></i>
+            </div>
+          </div>
+          <div
+            class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300">
+            <div class="w-full h-[2px] bg-white rounded-lg"></div>
+            <div class="w-full h-[2px] bg-white rounded-lg"></div>
+            <div
+              class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-white rounded-lg">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="fixed top-0 left-0 h-16 w-full z-50 bg-white -translate-y-full transition duration-500">
+        <!-- <div
+            class="layout w-full h-full absolute bg-black opacity-20 z-10"
+          ></div> -->
+        <div class="container h-full relative z-20 flex justify-between items-center">
+          <div class="logo h-full p-3 flex gap-2">
+            <img class="h-full" src="./assets/images/logo/Lets__3_-removebg-preview.png" alt="Logo" />
+            <img src="./assets/images/logo/logo text dark.png" alt="" class="h-full" />
+          </div>
+          <div class="controllers hidden md:flex gap-6 items-center">
+            <div class="links">
+              <ul class="flex gap-2">
+                <li class="py-3 px-2">
+                  <a class="text-black text-sm" href="products.html">Products</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-black text-sm" href="">About</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-black text-sm" href="">Reviews</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-black text-sm" href="">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="btns flex justify-center items-center gap-4">
+              <button
+                class="login btn text-black hover:text-white hover:bg-black transition duration-300 py-2 px-3 font-bold rounded-lg border-2 border-black">
+                Login
+              </button>
+              <button class="signup btn bg-black text-white font-bold py-2 px-3 rounded-lg border-2">
+                Sign Up
+              </button>
+            </div>
+          </div>
+          <div
+            class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300">
+            <div class="w-full h-[2px] bg-black rounded-lg"></div>
+            <div class="w-full h-[2px] bg-black rounded-lg"></div>
+            <div
+              class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-black rounded-lg">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-links hidden top-0 left-0 h-full w-full z-30 bg-white pt-20">
+        <ul class="flex flex-col gap-6 items-center justify-center">
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">Products</a>
+          </li>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">About</a>
+          </li>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">Reviews</a>
+          </li>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- categories -->
+    <section>
+      <div class="container mx-auto px-4  ">
+        <!-- animation: bounce 1s infinite; -->
+        <div class="flex justify-between mt-10 scroller-inner" id="categories">
+        </div>
+      </div>
+    </section>
+    <!-- products -->
+    <section>
+      <div class="container">
+        <div class="lg:grid mx-8 grid-cols-4 grid-rows-3 justify-items-center my-10" id="products"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer bg-dark text-white text-center py-3"></footer>
+
+
+  <script src="./assets/js/landingPage.js"></script>
+  <script src="assets/js/categories.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
