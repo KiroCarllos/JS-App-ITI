@@ -1,206 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sala App</title>
-    <!-- <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" /> -->
-    <!-- <link rel="stylesheet" href="assets/fonwawsome/all.css" /> -->
+<html lang="en" class="text-[12px] sm:text-[14px] md:text-[16px]">
 
-    <!-- <link rel="stylesheet" href="output.css" /> -->
-    <link rel="stylesheet" href="assets/css/site.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sala App</title>
 
-  <body>
-    <header>
-      <nav
-        class="relative px-4 py-4 flex justify-between items-center bg-black"
-      >
-        <a class="text-3xl font-bold leading-none text-white" href="/">
-          Lets-Cookies
-        </a>
-        <div class="lg:hidden">
-          <button
-            class="navbar-burger flex items-center text-blue-600 border-nonep-3"
-          >
-            <svg
-              class="block h-4 w-4 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-          </button>
+  <link rel="stylesheet" href="assets/css/landingStyle.css" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+
+<body class="bg-[#192332] overflow-x-clip m-0">
+  <div class="grid place-items-center relative h-svh py-28 mb-0 sm:mb-12">
+    <nav class="absolute top-0 left-0 h-16 w-full z-40">
+      <div class="layout w-full h-full absolute bg-black opacity-20 z-10"></div>
+      <div class="container h-full relative z-20 flex justify-between items-center">
+        <div class="logo h-full p-3 flex gap-2">
+          <img class="h-full" src="./assets/images/logo/Lets__3_-removebg-preview.png" alt="Logo" />
+          <img src="./assets/images/logo/logo text white.png" alt="" class="h-full" />
         </div>
-        <ul
-          class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
-        >
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="/"
-              >Home</a
-            >
+        <div class="hidden controllers md:flex gap-6 items-center">
+          <div class="links">
+            <ul class="flex gap-2">
+              <li class="py-3 px-2">
+                <a class="text-white text-sm" href="">Products</a>
+              </li>
+              <li class="py-3 px-2">
+                <a class="text-white text-sm" href="">About</a>
+              </li>
+              <li class="py-3 px-2">
+                <a class="text-white text-sm" href="">Reviews</a>
+              </li>
+              <li class="py-3 px-2">
+                <a class="text-white text-sm" href="">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns flex justify-center items-center gap-4">
+            <button
+              class="login btn text-white hover:text-black hover:bg-white transition duration-300 py-2 px-3 font-bold rounded-lg border-2">
+              Login
+            </button>
+            <button class="signup btn bg-white text-black font-bold py-2 px-3 rounded-lg border-2">
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <div
+          class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300">
+          <div class="w-full h-[2px] bg-white rounded-lg"></div>
+          <div class="w-full h-[2px] bg-white rounded-lg"></div>
+          <div
+            class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-white rounded-lg">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="fixed top-0 left-0 h-16 w-full z-50 bg-white -translate-y-full transition duration-500">
+      <!-- <div
+          class="layout w-full h-full absolute bg-black opacity-20 z-10"
+        ></div> -->
+      <div class="container h-full relative z-20 flex justify-between items-center">
+        <div class="logo h-full p-3 flex gap-2">
+          <img class="h-full" src="./assets/images/logo/Lets__3_-removebg-preview.png" alt="Logo" />
+          <img src="./assets/images/logo/logo text dark.png" alt="" class="h-full" />
+        </div>
+        <div class="controllers hidden md:flex gap-6 items-center">
+          <div class="links">
+            <ul class="flex gap-2">
+              <li class="py-3 px-2">
+                <a class="text-black text-sm" href="">Products</a>
+              </li>
+              <li class="py-3 px-2">
+                <a class="text-black text-sm" href="">About</a>
+              </li>
+              <li class="py-3 px-2">
+                <a class="text-black text-sm" href="">Reviews</a>
+              </li>
+              <li class="py-3 px-2">
+                <a class="text-black text-sm" href="">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns flex justify-center items-center gap-4">
+            <button
+              class="login btn text-black hover:text-white hover:bg-black transition duration-300 py-2 px-3 font-bold rounded-lg border-2 border-black">
+              Login
+            </button>
+            <button class="signup btn bg-black text-white font-bold py-2 px-3 rounded-lg border-2">
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <div
+          class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300">
+          <div class="w-full h-[2px] bg-black rounded-lg"></div>
+          <div class="w-full h-[2px] bg-black rounded-lg"></div>
+          <div
+            class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-black rounded-lg">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-links hidden top-0 left-0 h-full w-full z-30 bg-white pt-20">
+      <ul class="flex flex-col gap-6 items-center justify-center">
+        <li class="py-3 px-2">
+          <a class="text-black text-lg" href="">Products</a>
+        </li>
+        <li class="py-3 px-2">
+          <a class="text-black text-lg" href="">About</a>
+        </li>
+        <li class="py-3 px-2">
+          <a class="text-black text-lg" href="">Reviews</a>
+        </li>
+        <li class="py-3 px-2">
+          <a class="text-black text-lg" href="">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <img
+      class="header-image headerImageAnimation col-span-full absolute inset-0 w-full h-full opacity-30 object-cover -z-10"
+      src="./assets/./images/landing2.jpg" />
+    <div class="flex container justify-center md:justify-stretch px-6">
+      <div
+        class="landing-text animate-fadeOut flex flex-col justify-center gap-2 text-white w-4/5 md:w-3/5 lg:w-2/5 md:text-left text-center items-center md:items-stretch relative mb-24 z-20">
+        <h1 class="font-black text-[3.5em]">Hello There</h1>
+        <p class="landing-paragraph text-[0.9em] text-left">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
+          eligendi Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Architecto, aut?
+        </p>
+        <a href="products.html"
+          class="products-btn px-2 py-3 border-2 border-white border-solid w-fit text-white font-bold transition duration-300 hover:bg-[#192332] hover:border-[#131010]">Show
+          Store</a>
+      </div>
+      <div class="flex-1 hidden md:block"></div>
+    </div>
+  </div>
+  <div class="about text-white py-28 flex-col md:flex-row items-center md:items-stretch">
+    <div class="container m-auto flex justify-center items-center gap-6 flex-col md:flex-row">
+      <div
+        class="left flex items-center md:items-start justify-center gap-2 flex-col order-2 md:order-1 text-center md:text-left w-auto md:w-1/2">
+        <!-- <h2 class="in-view scale-75 opacity-0 font-black text-4xl"> -->
+        <h2 class="in-view font-black text-3xl">Our Mission</h2>
+        <p class="light-text in-view">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          faucibus, justo vel vulputate consectetur, nunc mauris fermentum
+          nunc, ac bibendum sapien felis nec dui. Donec consectetur, ipsum vel
+          consectetur fermentum, felis purus gravida massa, at consectetur
+          risus urna et neque.Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Quisque faucibus, justo vel vulputate consectetur,
+          nunc mauris fermentum nunc, ac bibendum sapien felis nec dui. Donec
+          consectetur, ipsum vel consectetur fermentum, felis purus gravida
+          massa, at consectetur risus urna et neque.
+        </p>
+      </div>
+      <div class="right d-flex align-items-center w-3/5 order-1 md:w-2/5">
+        <div class="image in-view opacity-0 w-[100%] md:w-[90%]">
+          <img src="./assets/images/storyImg1.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mission py-28 text-white bg-white">
+    <div class="container m-auto">
+      <div class="content flex items-center md:items-stretch justify-center gap-4 flex-col md:flex-row">
+        <div class="left w-3/5 md:w-2/5 order-1 flex items-center">
+          <div class="image in-view w-[60%] m-auto opacity-0">
+            <img class="" src="./assets/images/cookie.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="right flex items-center md:items-start justify-center order-2 text-center md:text-left w-auto gap-2 flex-col md:w-2/5">
+          <h2 class="in-view font-black text-[#131010] text-3xl">
+            Our Story
+          </h2>
+          <p class="text in-view text-[#131010]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            faucibus, justo vel vulputate consectetur, nunc mauris fermentum
+            nunc, ac bibendum sapien felis nec dui. Donec consectetur, ipsum
+            vel consectetur fermentum, felis purus gravida massa, at
+            consectetur risus urna et neque.Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Quisque faucibus, justo vel vulputate
+            consectetur, nunc mauris fermentum nunc, ac bibendum sapien felis
+            nec dui. Donec consectetur, ipsum vel consectetur fermentum, felis
+            purus gravida massa, at consectetur risus urna et neque.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-[#192332] py-28">
+    <div class="heading">
+      <div class="scroller m-auto max-w-[600px] text-white overflow-wrap mask-gradient mask">
+        <ul class="tag-list scroller-inner m-auto px-0 list-none flex gap-4 py-4">
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">HTML</li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">CSS</li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">JS</li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">SSG</li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">webdev</li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">
+            animation
           </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg">UI/UX</li>
+        </ul>
+      </div>
+      <div class="scroller m-auto max-w-[600px] text-white overflow-wrap mask-gradient mask" data-direction="right">
+        <ul class="tag-list scroller-inner m-auto px-0 list-none flex gap-4 py-4">
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            HTML
           </li>
-          <li>
-            <a class="text-sm text-blue-600 font-bold" href="#">About Us</a>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            CSS
           </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            JS
           </li>
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
-              >Services</a
-            >
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            SSG
           </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            webdev
           </li>
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
-              >Pricing</a
-            >
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            animation
           </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            UI/UX
           </li>
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
-              >Contact</a
-            >
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            HTML
+          </li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            CSS
+          </li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            JS
+          </li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            SSG
+          </li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            webdev
+          </li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            animation
+          </li>
+          <li class="word p-4 bg-[#1e293a] rounded-lg shadow-lg bg-[#1e293a] rounded-lg shadow-lg">
+            UI/UX
           </li>
         </ul>
-
-        <form class="flex justify-items-center items-center">
-          <a href="/pages/cart.html" class="position-relative me-3 relative">
-            <i class="fas fa-shopping-cart text-white"></i>
-            <span
-              class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full px-2 py-1 text-xs"
-              id="cart-count"
-            ></span>
-          </a>
-          <div id="loginDiv" class="flex items-center">
-            <a
-              class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
-              href="/pages/login.html"
-              >Sign In</a
-            >
-            <span class="text-white">|</span>
-
-            <a
-              class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
-              href="#"
-              >Register</a
-            >
-          </div>
-          <div id="profileDiv">
-            <span class="text-white mr-2">|</span>
-            <span class="text-white" id="username"></span>
-            <span class="text-white ml-2">|</span>
-            <a
-              class="hidden lg:inline-block py-2 px-6 hover:bg-slate-700 text-sm text-white font-bold rounded-xl transition duration-200"
-              href="#"
-              onclick="logout()"
-            >
-              <i
-                class="cursor-pointer fa-solid fa-right-from-bracket text-white ml-2"
-              ></i
-            ></a>
-          </div>
-        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-title-wrapper w-full flex justify-center py-8 bg-white">
+    <div class="footer-title-container w-4/5 flex items-center justify-center gap-5">
+      <span class="line h-[1px] flex-1 bg-[#333333]"></span>
+      <span class="title text-[#333333] whitespace-nowrap text-xl">Three Column Footer, with Icon and Company
+        Name</span>
+      <span class="line h-[1px] flex-1 bg-[#333333]"></span>
+    </div>
+  </div>
+  <footer class="footer bg-[#192332] py-10 sm:m-20">
+    <div
+      class="footer-content flex flex-col md:flex-row justify-between max-w-[1200px] mx-auto p-5 md:py-0 sm:px-20 gap-10 md:gap-20">
+      <aside class="footer-brand flex flex-col gap-3 items-center text-center">
+        <div class="footer-icon inline-block w-40 h-40 md:w-20 md:h-20">
+          <img src="./assets/images/cookie.png" alt="" />
+        </div>
+        <p class="brand-text text-white text-lg sm:text-base md:text-sm">
+          ATOMIC Industries Ltd.
+          <br />
+          Providing reliable atoms since 1945.
+        </p>
+      </aside>
+      <nav class="flex flex-col gap-3">
+        <h6 class="footer-heading text-white text-lg md:text-base font-semibold uppercase mb-3">
+          Services
+        </h6>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Branding</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Design</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Marketing</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Advertisement</a>
       </nav>
-    </header>
+      <nav class="flex flex-col gap-3">
+        <h6 class="footer-heading text-white text-lg md:text-base font-semibold uppercase mb-3">
+          Company
+        </h6>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">About us</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Contact</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Jobs</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Press kit</a>
+      </nav>
+      <nav class="flex flex-col gap-3">
+        <h6 class="footer-heading text-white text-lg md:text-base font-semibold uppercase mb-3">
+          Legal
+        </h6>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Terms of use</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Privacy policy</a>
+        <a class="footer-link text-[#bdbdbd] cursor-pointer text-lg sm:text-base md:text-sm">Cookie policy</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="assets/js/landingPage.js"></script>
+</body>
 
-    <main>
-      <!-- categories -->
-      <section>
-        <div class="container mx-auto px-4">
-          <!-- animation: bounce 1s infinite; -->
-          <div class="flex justify-between mt-10" id="categories">
-            <div class="w-full md:w-1/4">
-              <h5
-                id="category_3"
-                class="hover:animate-none transform scale-105 transition-all duration-500 animate-bounce bg-white border-2 border-gray-300 rounded-md text-center p-4 cursor-pointer text-xs w-[95%]"
-                onclick="addActiveCategory(3)"
-              >
-                All Categories
-              </h5>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- products -->
-      <section>
-        <div class="container">
-          <div
-            class="lg:grid mx-8 grid-cols-4 grid-rows-3 justify-items-center my-10"
-            id="products"
-          ></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer bg-dark text-white text-center py-3"></footer>
-
-    <script src="assets/js/categories.js"></script>
-    <script src="assets/js/auth.js"></script>
-    <script src="assets/js/products.js"></script>
-    <script src="assets/js/cart.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
 </html>
