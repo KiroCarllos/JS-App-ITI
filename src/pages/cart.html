@@ -1,215 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart Page</title>
-    <link rel="stylesheet" href="../assets/css/site.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav
-        class="relative px-4 py-4 flex justify-between items-center bg-black"
-      >
-        <a class="text-3xl font-bold leading-none text-white" href="/">
-          Lets-Cookies
-        </a>
-        <div class="lg:hidden">
-          <button
-            class="navbar-burger flex items-center text-blue-600 border-nonep-3"
-          >
-            <svg
-              class="block h-4 w-4 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Page</title>
+  <link rel="stylesheet" href="../assets/css/site.css" />
+  <link rel="stylesheet" href="../assets/fontawesome/all.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="grid place-items-center relative  mb-0 sm:mb-12">
+      <nav class="absolute top-0 left-0 h-16 w-full z-40 bg-black">
+        <div class="layout w-full h-full absolute bg-black opacity-20 z-10"></div>
+        <div class="container h-full relative z-20 flex justify-between items-center">
+          <div class="logo h-full p-3 flex gap-2">
+            <a href="/"><img class="h-full" src="../assets/images/logo/Lets__3_-removebg-preview.png" alt="Logo" /></a>
+            <a href="/"> <img src="../assets/images/logo/logo text white.png" alt="" class="h-full" /></a>
+          </div>
+          <div class="hidden controllers md:flex gap-6 items-center">
+            <div class="links">
+              <ul class="flex gap-2">
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="products.html">Products</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="about.html">About</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="reviews.html">Reviews</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+
+            <form class="flex items-center">
+              <a href="/pages/cart.html" class="relative mr-3">
+                <i class="fas fa-shopping-cart text-white"></i>
+                <span
+                  class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 badge rounded-full bg-red-500 h-6 w-6 text-center text-white"
+                  data-cart="cart-count">0</span>
+              </a>
+              <div class="btns flex justify-center items-center gap-4" data-loginDiv>
+                <button
+                  class="login btn text-white hover:text-black hover:bg-white transition duration-300 py-2 px-3 font-bold rounded-lg border-2"
+                  onclick="window.location.href='../pages/login.html'">
+                  Login
+                </button>
+                <button class="signup btn bg-white text-black font-bold py-2 px-3 rounded-lg border-2">
+                  Sign Up
+                </button>
+              </div>
+              <div id="profileDiv">
+                <span class="text-white me-2">|</span>
+                <span class="text-white" id="username"></span>
+                <span class="text-white ms-2">|</span>
+                <i class="logout fa-solid fa-right-from-bracket text-white ms-2 cursor-pointer" onclick="logout()"></i>
+              </div>
+            </form>
+          </div>
+          <div
+            class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300">
+            <div class="w-full h-[2px] bg-white rounded-lg"></div>
+            <div class="w-full h-[2px] bg-white rounded-lg"></div>
+            <div
+              class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-white rounded-lg">
+            </div>
+          </div>
         </div>
-        <ul
-          class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6"
-        >
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="/"
-              >Home</a
-            >
+      </nav>
+      <nav class="fixed top-0 left-0 h-16 w-full z-50 bg-black -translate-y-full transition duration-500">
+        <div class="container h-full relative z-20 flex justify-between items-center">
+          <div class="logo h-full p-3 flex gap-2">
+            <img class="h-full" src="../assets/images/logo/Lets__3_-removebg-preview.png" alt="Logo" />
+            <img src="../assets/images/logo/logo text dark.png" alt="" class="h-full" />
+          </div>
+          <div class="controllers hidden md:flex gap-6 items-center">
+            <div class="links">
+              <ul class="flex gap-2">
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="products.html">Products</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="about.html">About</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="reviews.html">Reviews</a>
+                </li>
+                <li class="py-3 px-2">
+                  <a class="text-white text-sm" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <form class="flex items-center">
+              <a href="/pages/cart.html" class="relative mr-3">
+                <i class="fas fa-shopping-cart text-white"></i>
+                <span
+                  class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 badge rounded-full bg-red-500 h-6 w-6 text-center text-white"
+                  data-cart="cart-count">0</span>
+              </a>
+              <div class="btns flex justify-center items-center gap-4" data-loginDiv>
+                <button
+                  class="login btn text-white hover:text-black hover:bg-white transition duration-300 py-2 px-3 font-bold rounded-lg border-2"
+                  onclick="window.location.href='../pages/login.html'">
+                  Login
+                </button>
+                <button class="signup btn bg-white text-black font-bold py-2 px-3 rounded-lg border-2">
+                  Sign Up
+                </button>
+              </div>
+              <div id="profileDiv">
+                <span class="text-white me-2">|</span>
+                <span class="text-white" id="username"></span>
+                <span class="text-white ms-2">|</span>
+                <i class="logout fa-solid fa-right-from-bracket text-white ms-2 cursor-pointer" onclick="logout()"></i>
+              </div>
+            </form>
+          </div>
+          <div
+            class="burger-icon flex md:hidden flex-col justify-evenly w-6 h-6 cursor-pointer m-4 group transition duration-300">
+            <div class="w-full h-[2px] bg-black rounded-lg"></div>
+            <div class="w-full h-[2px] bg-black rounded-lg"></div>
+            <div
+              class="w-full origin-left scale-x-[0.6] transition duration-500 group-hover:scale-x-100 h-[2px] bg-black rounded-lg">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-links hidden top-0 left-0 h-full w-full z-30 bg-white pt-20">
+        <ul class="flex flex-col gap-6 items-center justify-center">
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="products.html">Products</a>
           </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="about.html">About</a>
           </li>
-          <li>
-            <a class="text-sm text-blue-600 font-bold" href="#">About Us</a>
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="reviews.html">Reviews</a>
           </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
-          </li>
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
-              >Services</a
-            >
-          </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
-          </li>
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
-              >Pricing</a
-            >
-          </li>
-          <li class="text-gray-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              class="w-4 h-4 current-fill"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
-          </li>
-          <li>
-            <a class="text-sm text-gray-400 hover:text-gray-500" href="#"
-              >Contact</a
-            >
+          <li class="py-3 px-2">
+            <a class="text-black text-lg" href="contact.html">Contact Us</a>
           </li>
         </ul>
-
-        <form class="flex justify-items-center items-center">
-          <a href="/pages/cart.html" class="position-relative me-3 relative">
-            <i class="fas fa-shopping-cart text-white"></i>
-            <span
-              class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full px-2 py-1 text-xs"
-              id="cart-count"
-            ></span>
-          </a>
-          <div id="loginDiv" class="flex items-center">
-            <a
-              class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
-              href="/pages/login.html"
-              >Sign In</a
-            >
-            <span class="text-white">|</span>
-
-            <a
-              class="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold rounded-xl transition duration-200"
-              href="#"
-              >Register</a
-            >
-          </div>
-          <div id="profileDiv">
-            <span class="text-white mr-2">|</span>
-            <span class="text-white" id="username"></span>
-            <span class="text-white ml-2">|</span>
-            <a
-              class="hidden lg:inline-block py-2 px-6 hover:bg-slate-700 text-sm text-white font-bold rounded-xl transition duration-200"
-              href="#"
-              onclick="logout()"
-            >
-              <i
-                class="cursor-pointer fa-solid fa-right-from-bracket text-white ml-2"
-              ></i
-            ></a>
-          </div>
-        </form>
-      </nav>
-    </header>
-
-    <div class="pl-5 pr-5">
-      <h1
-        class="my-20 bg-white rounded-md shadow-md p-[30px] font-bold text-[30px]"
-      >
-        Shopping Cart
-      </h1>
-      <div class="row flex justify-between">
-        <div
-          class="w-2/3 my-20 bg-white rounded-md shadow-md p-[30px] font-bold text-[30px]"
-          id="cart"
-        >
-          <h2>Your Items</h2>
-          <table class="w-full">
-            <thead class="bg-gray-500">
-              <tr class="w-full">
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-
-            <tbody id="cart-items"></tbody>
-          </table>
-        </div>
-        <div
-          class="w-1/4 p-5 mt-20 ms-auto bg-gray-500 rounded-md shadow-md font-bold text-[30px] text-slate-950"
-        >
-          <h2>Summary</h2>
-          <p class="flex justify-between">
-            Total Items : <span id="total-items">0</span>
-          </p>
-          <p class="flex justify-between">Tax : <span>$ 0.00 </span></p>
-          <h3 class="flex justify-between">
-            Total : <span id="total-items-cost">0</span>
-          </h3>
-          <button
-            class="bg-slate-950 rounded-md text-white my-10 w-full p-2"
-            onclick="alert('Not Have gateway yet!')"
-          >
-            Checkout
-          </button>
-        </div>
       </div>
     </div>
-    <script src="../assets/dist/js/bootstrap.popper.min.js"></script>
-    <script src="../assets/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/auth.js"></script>
-    <script src="../assets/js/cart.js"></script>
-  </body>
+  </header>
+
+  <div>
+    <div class="row flex justify-between">
+      <div class="w-full my-10 bg-white rounded-md shadow-md p-6" id="cart">
+        <h2 class="text-2xl font-semibold mb-4">Your Items</h2>
+        <table class="min-w-full bg-white border border-gray-200">
+          <thead>
+            <tr>
+              <th class="py-2 px-4 border-b text-left">Product</th>
+              <th class="py-2 px-4 border-b text-left">Price</th>
+              <th class="py-2 px-4 border-b text-left">Quantity</th>
+              <th class="py-2 px-4 border-b text-left">Total</th>
+              <th class="py-2 px-4 border-b text-left">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+      </div>
+      <div class="w-full mt-10 bg-gray-100 rounded-md shadow-md p-6">
+        <h2 class="text-2xl font-semibold mb-4">Summary</h2>
+        <p class="flex justify-between mb-2">
+          Total Items: <span id="total-items">0</span>
+        </p>
+        <p class="flex justify-between mb-2">Tax: <span>$ 0.00</span></p>
+        <h3 class="flex justify-between mb-4">
+          Total: <span id="total-items-cost">0</span>
+        </h3>
+        <button class="bg-blue-600 rounded-md text-white py-2 px-4 w-full" onclick="alert('Not Have gateway yet!')">
+          Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/cart.js"></script>
+</body>
+
 </html>

@@ -4,7 +4,6 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 }
 function addAnimation() {
   scrollers.forEach((scroller) => {
-    console.log(scroller);
     scroller.setAttribute("data-animated", true);
   });
 }
